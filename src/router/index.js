@@ -16,8 +16,8 @@ const routes = [
     path: '/',
     component: DefaultLayout,
     children: [
-      { path: '/', component: Home },
-      { path: '/letter/:letter', name: "byLetter", component: MealList },
+      { path: '/', component: Home, redirect: '/by-name/' },
+      { path: '/letter/:letter?', name: "byLetter", component: MealList },
       { path: '/by-letter/:letter?', name: "byLetter", component: MealsByLetter },
       { path: '/by-name/:name?', name: "byName", component: MealsByName },
       { path: '/ingredients', name: "ingredients", component: IngredientsList },
